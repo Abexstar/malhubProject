@@ -7,7 +7,7 @@ function MainPage() {
     <div className="flex gap-20">
       <div>
         <img
-          className="w-[700px] h-[400px] rounded-[500px] ml-5 mt-5"
+          className="w-[500px] h-[500px] rounded-full ml-16 mt-5"
           src={malhubWorkSpace}
           alt="image"
         />

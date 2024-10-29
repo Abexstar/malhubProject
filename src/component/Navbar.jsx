@@ -1,39 +1,43 @@
 import React from 'react'
 import MalhubLogo from "../assets/MalhubLogo.png"
-import SignIn from './SignIn'
 import { Link } from 'react-router-dom'
 
+ 
+  const Navbar = () => {
 
-function Navbar() {
+
   return (
     <>
-    <div className='flex items-center my-[20px] ml-[15px] gap-[250px]'>
+    <nav className='fixed flex items-center w-[100%] gap-[180px] bg-transparent backdrop-blur border shadow-2xl px-3 py-3'>
           <div>
-            <img className='h-[47px] w-[140px]' src={MalhubLogo} alt="logo"></img>
+            <Link to='/'><img className='h-[47px] w-[140px]' src={MalhubLogo} alt="logo"></img></Link>
           </div> 
 
-        <div className='flex gap-16 text-[14px] font-mono'>
-            <p className='hover:text-[#3c4493]'>Register</p>
-
-            <p className='hover:text-[#3c4493]'>See Plan</p>
-
-            <p className='hover:text-[#3c4493]'>Book Plan</p>
-
-            <p className='hover:text-[#3c4493]'>Payment</p>
-
-        </div>
+        <ul className='flex gap-16 text-[14px] font-mono'>
         
-        <div className='flex gap-3'>
+            <li className='hover:text-[#3c4493]'><Link to="signin">Register</Link></li>
+
+            <li className='hover:text-[#3c4493]'><Link to='payment'>See Plan</Link></li>
+
+            <li className='hover:text-[#3c4493]'><Link to='payment'> Book Plan</Link></li>
+
+            <li className='hover:text-[#3c4493]'><Link to="payment">Payment</Link></li>
+
+        </ul>
         
-        <button className='border-[1px] border-solid border-[#3e4694] rounded-[50px] justify-center h-[50px] w-[80px] flex items-center hover:bg-[#3e4694] text-[15px] hover:text-white'>
+        <div className='flex gap-5 ml-20'>
+        
+        <button className='border-[1px] border-solid border-transparent rounded-[50px] justify-center h-[40px] w-[80px] flex items-center hover:bg-[#3e4694] text-[15px] hover:text-white'>
           <Link to="signin">Sign up</Link>
           </button>
 
-        <button className='border-[1px] border-solid border-[#3e4694] rounded-[50px] justify-center h-[50px] w-[80px] flex items-center hover:bg-[#3e4694] text-[15px] hover:text-white'>Log in</button>
+        <button className='border-[1px] border-solid border-transparent rounded-[50px] justify-center h-[40px] w-[80px] flex items-center hover:bg-[#3e4694] text-[15px] hover:text-white'>
+          <Link to='login'>Log in</Link>
+          </button>
 
         </div>
 
-    </div>
+    </nav>
     </>
   )
 }
